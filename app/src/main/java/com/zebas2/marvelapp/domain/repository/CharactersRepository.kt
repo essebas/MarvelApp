@@ -7,11 +7,22 @@ import kotlinx.coroutines.flow.Flow
 
 interface CharactersRepository {
 
-    suspend fun getCharacters(): Resource<APIResponse>
+    suspend fun getCharacters(
+        isUserNeededMoreCharacters: Boolean,
+        isOfflineConnection: Boolean
+    ): Resource<APIResponse>
+
     suspend fun getCharacterDetail(characterId: String): Resource<APIResponse>
 
+    suspend fun getSearchedByNameCharacters(
+        userSearch: String,
+        isOfflineConnection: Boolean,
+        isTemporalSearch: Boolean
+    ): Resource<APIResponse>
+
     suspend fun saveCharacter(character: Character)
+    fun getCharactersPage(limit: Int, offset: Int): Resource<APIResponse>
     suspend fun deleteCharacter(character: Character)
-    fun getSaveCharacter():Flow<List<Character>>
+    fun getSaveCharacter(): Flow<List<Character>>
 
 }
