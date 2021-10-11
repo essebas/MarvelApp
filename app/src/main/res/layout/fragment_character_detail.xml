@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:transitionName="@string/character_card_detail_transaction"
+    tools:context=".CharacterDetailFragment">
+
+    <ImageView
+        android:id="@+id/img_detail"
+        android:layout_width="match_parent"
+        android:layout_height="194dp"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/secondary_red" />
+
+    <LinearLayout
+        android:id="@+id/lay_info_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/marvel_bold"
+            android:text="Example"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="?attr/colorOnPrimary" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txv_test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Character Detail Fragment" />
+
+</LinearLayout>
