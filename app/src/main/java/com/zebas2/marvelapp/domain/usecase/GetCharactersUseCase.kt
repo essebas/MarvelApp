@@ -6,6 +6,13 @@ import com.zebas2.marvelapp.domain.repository.CharactersRepository
 
 class GetCharactersUseCase(private val charactersRepository: CharactersRepository) {
 
-    suspend fun execute(): Resource<APIResponse> = charactersRepository.getCharacters()
+    suspend fun execute(
+        isUserNeededMoreCharacters: Boolean,
+        isOfflineConnection: Boolean
+    ): Resource<APIResponse> =
+        charactersRepository.getCharacters(isUserNeededMoreCharacters, isOfflineConnection)
+
+    fun getAllCharacters(limit: Int, offset: Int) =
+        charactersRepository.getCharactersPage(limit, offset)
 
 }
