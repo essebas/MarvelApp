@@ -5,17 +5,27 @@ import com.google.gson.annotations.SerializedName
 
 data class APIResponse(
     @SerializedName("attributionHTML")
-    val attributionHTML: String,
+    val attributionHTML: String?,
     @SerializedName("attributionText")
-    val attributionText: String,
+    val attributionText: String?,
     @SerializedName("code")
-    val code: String,
+    val code: String?,
     @SerializedName("copyright")
-    val copyright: String,
+    val copyright: String?,
     @SerializedName("data")
     val `data`: Data,
     @SerializedName("etag")
-    val etag: String,
+    val etag: String?,
     @SerializedName("status")
-    val status: String
-)
+    val status: String?
+) {
+    constructor(data: Data) : this(
+        attributionHTML = "",
+        attributionText = "",
+        code = "",
+        copyright = "",
+        data = data,
+        etag = "",
+        status = ""
+    )
+}

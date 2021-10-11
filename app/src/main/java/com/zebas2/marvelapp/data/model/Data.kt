@@ -11,7 +11,15 @@ data class Data(
     @SerializedName("offset")
     val offset: String,
     @SerializedName("results")
-    val results: List<Character>,
+    var results: List<Character>,
     @SerializedName("total")
     val total: String
-)
+) {
+    constructor(resultsList: List<Character>) : this(
+        count = "",
+        limit = "",
+        offset = "offset.toString()",
+        results = resultsList,
+        total = resultsList.size.toString()
+    )
+}
