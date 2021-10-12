@@ -6,7 +6,8 @@ In the following application a user can see and consult all the marvel superhero
 
 ### Gathering information - UML Client Logic
 
---insert image
+![Inicio de la aplicacion](https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/MarvelUseCase.png)
+
 
 ## Technologies used
 - Retrofit (v2.9.0)
@@ -36,7 +37,7 @@ We will give a quick view to know the functionalities of the application
 ### Home (Characters RecyclerView Fragment)
 This is where we can see all the superheroes provided by the Marvel API. Each super hero will be displayed in a cardview and all of these will be grouped and displayed within a recyclerview
 
---insert image
+![Inicio de la aplicacion](https://github.com/essebas/Last.fm-Application/blob/master/readme-snaps/home.PNG)
 
 ### Home (Technical Information)
 If the application is downloaded for the first time or if data is being loaded from the database, it will always load 40 characters. The user will be able to obtain more results if he scrolls to the end of the list, there will appear a loading and the respective useCase to obtain more characters to bring from DB or from API more characters. Something interesting is that all data sources are synchronized so network consumption is optimized by sacrificing the size of the application, this means that as the user requires more characters, these will be saved in the database . 
