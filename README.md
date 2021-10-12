@@ -85,3 +85,24 @@ This search is carried out when the user needs something much more specific. Thi
 The user will be able to see the details of each superhero directly from the Marvel page through a webview and a url that each character brings from the API.
 
 <img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/CharacterDetail.jpg" width="200">
+
+
+### Offline Home (With Room Persistence)
+
+The application can also continue to function even if the user is not connected to the internet. This is thanks to the fact that the app stores the data of the characters in each consumption to the API, to avoid duplication in the data, 2 counters were incorporated, one for the API and the other for the DB. These counters are stored on a private SharedPreferences of the app to always have the position of each datasource. A simple example of how it works is the following:
+Suppose that the user has seen 160 (4 consumptions to the MARVEL API), this data is saved in SQLite immediately we have the answer so there is 160 data in the database.
+The application always returns the data as follows:
+
+Cache -> Local Data (Room) -> Remote (REST API)
+
+The cache only works in case the user places the application in the background and returns to it a few minutes later. If the app is destroyed, as there is no data in the cache, it will look for resources from the local DB. These will be provided the same as what the API does, at 40 characters per "page", this to optimize performance and show you the data that the user will actually see. If at some point all the data stored in the database is shown, it will be used to consume the API, if the application does not have an internet, an error message will be displayed.
+
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/OfflineHome.jpg" width="200">
+
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/OfflineHome2.jpg" width="200">
+
+### Offline Search (With Room Persistence)
+
+The user can also do offline searches, but these will depend on the data that the user has stored in SQLite.
+
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/OfflineSearch.jpg" width="200">
