@@ -8,6 +8,9 @@ In the following application a user can see and consult all the marvel superhero
 
 ![Inicio de la aplicacion](https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/MarvelUseCase.png)
 
+### Project Architecture
+
+![Inicio de la aplicacion](https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/MarvelArchitecture.png)
 
 ## Technologies used
 - Retrofit (v2.9.0)
