@@ -1,14 +1,13 @@
-package com.zebas2.marvelapp
+package com.zebas2.marvelapp.presentation
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.zebas2.marvelapp.R
 import com.zebas2.marvelapp.data.util.Prefers
 import com.zebas2.marvelapp.databinding.ActivityMainBinding
 import com.zebas2.marvelapp.presentation.adapter.CharacterAdapter

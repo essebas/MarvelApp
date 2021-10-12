@@ -1,23 +1,18 @@
-package com.zebas2.marvelapp
+package com.zebas2.marvelapp.presentation.fragment
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
 import android.widget.AbsListView
 import android.widget.SearchView
 import android.widget.Toast
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.zebas2.marvelapp.data.model.Character
-import com.zebas2.marvelapp.data.model.Url
+import com.zebas2.marvelapp.presentation.MainActivity
+import com.zebas2.marvelapp.R
 import com.zebas2.marvelapp.data.util.Prefers
 import com.zebas2.marvelapp.data.util.Resource
 import com.zebas2.marvelapp.databinding.FragmentCharactersBinding
@@ -59,19 +54,22 @@ class CharactersFragment : Fragment() {
         prefers = (activity as MainActivity).preferences
 
         characterAdapter.setOnItemCLickListener {
-            val bundle = Bundle().apply {
-                putSerializable("selected_character", it)
-            }
+            if (viewModel.isNetWorkAvailable(activity)) {
+                val bundle = Bundle().apply {
+                    putSerializable("selected_character", it)
+                }
+                var actionNav = R.id.action_charactersFragment_to_characterDetailFragment
+                if (it.urls?.any { url -> url.type == "detail" } == true) {
+                    actionNav = R.id.action_charactersFragment_to_characterDetailWebViewFragment
+                }
 
-            var actionNav = R.id.action_charactersFragment_to_characterDetailFragment
-            if (it.urls?.any { url -> url.type == "detail" } == true) {
-                actionNav = R.id.action_charactersFragment_to_characterDetailWebViewFragment
+                findNavController().navigate(
+                    actionNav,
+                    bundle
+                )
+            } else {
+                Toast.makeText(activity, "No tienes conexion a internet", Toast.LENGTH_SHORT).show()
             }
-
-            findNavController().navigate(
-                actionNav,
-                bundle
-            )
         }
         initRecyclerView()
         //Observers Objects
@@ -161,7 +159,7 @@ class CharactersFragment : Fragment() {
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 tempSearch = newText.toString()
-                /*setProgressBarVisibility(View.VISIBLE)
+                setProgressBarVisibility(View.VISIBLE)
                 isSearch = true
                 MainScope().launch {
                     delay(3000)
@@ -175,7 +173,7 @@ class CharactersFragment : Fragment() {
                             this.cancel()
                         }
                     }
-                }*/
+                }
                 return false
             }
 

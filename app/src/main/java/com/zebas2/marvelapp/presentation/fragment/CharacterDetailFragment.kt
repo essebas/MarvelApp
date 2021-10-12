@@ -1,4 +1,4 @@
-package com.zebas2.marvelapp
+package com.zebas2.marvelapp.presentation.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
-import com.zebas2.marvelapp.data.util.Prefers
+import com.zebas2.marvelapp.R
 import com.zebas2.marvelapp.databinding.FragmentCharacterDetailBinding
 
 class CharacterDetailFragment : Fragment() {

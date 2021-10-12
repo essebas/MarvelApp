@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:transitionName="@string/character_card_detail_transaction"
-    tools:context=".CharacterDetailFragment">
+    tools:context=".presentation.fragment.CharacterDetailFragment">
 
     <ImageView
         android:id="@+id/img_detail"

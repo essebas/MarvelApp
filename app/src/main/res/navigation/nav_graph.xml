@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/charactersFragment"
-        android:name="com.zebas2.marvelapp.CharactersFragment"
+        android:name="com.zebas2.marvelapp.presentation.fragment.CharactersFragment"
         android:label="fragment_characters"
         tools:layout="@layout/fragment_characters">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/characterDetailFragment"
-        android:name="com.zebas2.marvelapp.CharacterDetailFragment"
+        android:name="com.zebas2.marvelapp.presentation.fragment.CharacterDetailFragment"
         android:label="fragment_character_detail"
         tools:layout="@layout/fragment_character_detail">
         <argument
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/characterDetailWebViewFragment"
-        android:name="com.zebas2.marvelapp.CharacterDetailWebViewFragment"
+        android:name="com.zebas2.marvelapp.presentation.fragment.CharacterDetailWebViewFragment"
         android:label="fragment_character_detail_web_view"
         tools:layout="@layout/fragment_character_detail_web_view" >
         <argument

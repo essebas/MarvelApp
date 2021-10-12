@@ -1,4 +1,4 @@
-package com.zebas2.marvelapp
+package com.zebas2.marvelapp.presentation.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
 import androidx.navigation.fragment.navArgs
-import com.zebas2.marvelapp.data.util.Prefers
+import com.zebas2.marvelapp.R
 import com.zebas2.marvelapp.databinding.FragmentCharacterDetailWebViewBinding
 
 private const val TAG = "CharacterDetailWebViewF"
