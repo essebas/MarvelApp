@@ -39,6 +39,8 @@ We will give a quick view to know the functionalities of the application
 
 ![Inicio de la aplicacion](https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/Principal.jpg =250x)
 
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/Principal.jpg" width="200">
+
 ### Home (Characters RecyclerView Fragment)
 This is where we can see all the superheroes provided by the Marvel API. Each super hero will be displayed in a cardview and all of these will be grouped and displayed within a recyclerview
 
