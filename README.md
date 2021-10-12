@@ -57,9 +57,26 @@ There are 3 types of data sources, the main one is the API, which is where we ca
 ### Search Function (SearchView)
 The application has a searchview at the top of the recyclerview, this can be used for the user to search for a specific superhero name (eg Wolverine) or search for the first initials of a group of superheroes (eg Spi) 
 
---insert image
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/Search1.jpg" width="200">
+
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/Search3.jpg" width="200">
 
 ### Search Function (Data Sources)
 For searches we will have 2 types of data sources, the use of one or the other will depend on whether the user has an internet connection. Therefore, if the user has an internet connection, the searches will come from the API. However, if the user does not have a network connection, a search will be made with the data that the database has so far. 
 
---insert image
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/Search4.jpg" width="200">
+
+### Search Function (Faster Update RecyclerView)
+Every time the user interacts with the Searchview, a request will be sent to obtain the data as the user's characters change. However, if the data is called in this way, the application would not be efficient, and it consumes resources unnecessarily, so there is a delay of 3 seconds that the user has to wait for the search to be sent and the results are obtained. API or DB data as the case may be.
+
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/Search5.jpg" width="200">
+
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/Search6.jpg" width="200">
+
+
+### Search Function (Complete Search)
+This search is carried out when the user needs something much more specific. This is launched when the user enters a complete keyword and hits the enter key on the keyboard.
+
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/SearchTotal2.jpg" width="200">
+
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/SearchTotal1.jpg" width="200">
