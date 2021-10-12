@@ -80,3 +80,8 @@ This search is carried out when the user needs something much more specific. Thi
 <img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/SearchTotal2.jpg" width="200">
 
 <img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/SearchTotal1.jpg" width="200">
+
+### Character Deatil (WebView)
+The user will be able to see the details of each superhero directly from the Marvel page through a webview and a url that each character brings from the API.
+
+<img src="https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/CharacterDetail.jpg" width="200">
