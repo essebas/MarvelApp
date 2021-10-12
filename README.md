@@ -37,17 +37,17 @@ In the following application a user can see and consult all the marvel superhero
 
 We will give a quick view to know the functionalities of the application 
 
-![Inicio de la aplicacion](https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/Principal.png)
+![Inicio de la aplicacion](https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/Principal.jpg)
 
 ### Home (Characters RecyclerView Fragment)
 This is where we can see all the superheroes provided by the Marvel API. Each super hero will be displayed in a cardview and all of these will be grouped and displayed within a recyclerview
 
-![Inicio de la aplicacion](https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/Home1.png)
+![Inicio de la aplicacion](https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/Home1.jpg)
 
 ### Home (Technical Information)
 If the application is downloaded for the first time or if data is being loaded from the database, it will always load 40 characters. The user will be able to obtain more results if he scrolls to the end of the list, there will appear a loading and the respective useCase to obtain more characters to bring from DB or from API more characters. Something interesting is that all data sources are synchronized so network consumption is optimized by sacrificing the size of the application, this means that as the user requires more characters, these will be saved in the database . 
 
-![Inicio de la aplicacion](https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/HomeLoad2.png)
+![Inicio de la aplicacion](https://github.com/essebas/MarvelApp/blob/master/README_IMAGES/HomeLoad2.jpg)
 
 ### Home (Data Sources)
 There are 3 types of data sources, the main one is the API, which is where we can initially obtain the data. The second is the bd, built through the room library, this will be fed into the registry as the app downloads information in batches of 40 characters. Finally we will have a cache storage to show data quickly every time the user resumes the application. 
